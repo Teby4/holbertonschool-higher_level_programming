@@ -1,5 +1,2 @@
 #!/usr/bin/python3
-f = open('The_Zen_of_Python.txt', 'r')
-m = f.read()
-print(m, end='')
-f.close()
+print("The Zen of Python, by Tim Peters\n")
