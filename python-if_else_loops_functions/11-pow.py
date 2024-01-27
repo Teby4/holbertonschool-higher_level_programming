@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 def pow(a, b):
-    power = a ^ b
-    print(power)
+    return a ** b
