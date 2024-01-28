@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if argc == 0:
         print("0 arguments.")
 
-    else argc != 0:
+    else:
         sum = 0
         for i in range(1, argc, + 1)
             sum += int(sys.argv[i])
