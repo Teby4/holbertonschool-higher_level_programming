@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-
-    if not matrix
-        return None
-
+    new_matrix = matrix
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-            square = matrix[i][j]**2
-            print(matrix[i][j], end=' ')
+            new_matrix[i][j] = matrix[i][j]**2
+    return new_matrix
