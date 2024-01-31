@@ -4,7 +4,7 @@ def square_matrix_simple(matrix=[]):
     if not matrix
         return None
 
-    for row in matrix:
-        for index, element in enumerate(row):
-                square = element**2
-                print("{:d}".format(square))
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            square = matrix[i][j]**2
+            print(matrix[i][j], end=' ')
