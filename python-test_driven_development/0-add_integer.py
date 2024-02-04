@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" 
+"""
 this file contains the  add_integrer function
 """
 
+
 def add_integer(a, b=98):
-    """ 
+
+    """
     add the addition of two integrers
     """
     if not isinstance(a, (int, float)):
