@@ -3,6 +3,7 @@
     Write a class Square that defines a square by: (based on 0-square.py)
 """
 
+
 class Square:
     """
     square class
@@ -12,8 +13,8 @@ class Square:
         initialice square instance
         """
         if isinstance(size, int) and size > 0:
-            self.__size = size 
-        
+            self.__size = size
+
         elif not isinstance(size, int):
             raise TypeError("size must be an integer")
 
