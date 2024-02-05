@@ -38,3 +38,15 @@ TypeError: b must be an integer
 >>> add_integer('a', 4)
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+# Test Case 10: float inf
+>>> add_integer(float('inf'), 0)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+# Test Case 11: float nan
+>>> add_integer(0, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
