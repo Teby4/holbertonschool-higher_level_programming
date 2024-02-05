@@ -22,8 +22,8 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 24
 
 # Test Case 6: Valid addition with negative numbers
->>> add_integer(-2, 2)
-0
+>>> add_integer(2)
+100
 
 # Test Case 7: Valid addition with negative numbers
 >>> add_integer(2, -2)
