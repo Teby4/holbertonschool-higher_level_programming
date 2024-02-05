@@ -29,8 +29,8 @@ class TestMaxInteger(unittest.TestCase):
             max_integer(None)
 
     def test_default_list(self):
-       """ test using the default list """
-    with self.assertRaises(TypeError):
+        """test default list"""
+        with self.assertRaises(TypeError):
             max_integer()
 
 if __name__ == '__main__':
