@@ -1,24 +1,40 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
+# Test Case 1: Missing argument
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
+# Test Case 2: Valid addition with positive integers
 >>> add_integer(3, 4)
 7
+
+# Test Case 3: Valid addition with negative and positive integers
 >>> add_integer(-2, 4)
 2
+
+# Test Case 4: Valid addition with larger numbers
 >>> add_integer(14, 4)
 18
+
+# Test Case 5: Valid addition with larger numbers
 >>> add_integer(20, 4)
 24
+
+# Test Case 6: Valid addition with negative numbers
 >>> add_integer(-2, 2)
 0
+
+# Test Case 7: Valid addition with negative numbers
 >>> add_integer(2, -2)
 0
+
+# Test Case 8: Invalid addition with a string argument
 >>> add_integer(2, 'b')
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+# Test Case 9: Invalid addition with a string argument
 >>> add_integer('a', 4)
 Traceback (most recent call last):
 TypeError: a must be an integer

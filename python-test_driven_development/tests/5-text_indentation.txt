@@ -1,0 +1,33 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test Case 1: Missing argument
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+# Test Case 2: Valid input with no special characters
+>>> text_indentation("hola")
+hola
+
+# Test Case 3: Valid input with '.', '?', and ':' characters
+>>> text_indentation("hola. como estas")
+hola.
+<BLANKLINE>
+como estas
+
+# Test Case 4: Empty string
+>>> text_indentation("")
+
+
+# Test Case 5: Multiple lines with special characters
+>>> text_indentation("Hello? How are you doing? This is a test")
+Hello?
+<BLANKLINE>
+How are you doing?
+<BLANKLINE>
+This is a test
+
+# Test Case 6: Non-string input
+>>> text_indentation(25)
+Traceback (most recent call last):
+TypeError: text must be a string

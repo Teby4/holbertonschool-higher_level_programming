@@ -1,18 +1,28 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+# Test Case 1: Missing argument
 >>> say_my_name()
 Traceback (most recent call last):
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
+# Test Case 2: Valid input with only first name
 >>> say_my_name("Felipe")
 My name is Felipe 
+
+# Test Case 3: Valid input with both first and last names
 >>> say_my_name("Felipe", "Olivera")
 My name is Felipe Olivera
+
+# Test Case 4: Valid input with a space as the first name
 >>> say_my_name(" ", "Olivera")
 My name is   Olivera
+
+# Test Case 5: Invalid input with a numeric first name
 >>> say_my_name(5, "bob")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+# Test Case 6: Invalid input with a numeric last name
 >>> say_my_name("bob", 5)
 Traceback (most recent call last):
 TypeError: last_name must be a string
