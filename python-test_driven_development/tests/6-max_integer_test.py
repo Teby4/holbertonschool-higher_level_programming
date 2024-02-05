@@ -13,8 +13,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max(self):
         """ tests for the max integrer function"""
-        self.assertEqual(max_integer([1, 10]), 10)
-        self.assertEqual(max_integer([1, -1]), 1)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([1, 3, 4, 2]), 4)
         self.assertEqual(max_integer([15, 10]), 15)
         self.assertEqual(max_integer([20, 10]), 20)
         self.assertEqual(max_integer([-1, -2]), -1)
@@ -22,10 +22,16 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 1.5]), 1.5)
     
     def test_errors(self):
+        """ test the raise erorrs """
         with self.assertRaises(TypeError):
             max_integer([1, "10"])
         with self.assertRaises(TypeError):
             max_integer(None)
+
+    def test_default_list(self):
+       """ test using the default list """
+    with self.assertRaises(TypeError):
+            max_integer()
 
 if __name__ == '__main__':
     unittest.main()
