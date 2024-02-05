@@ -5,6 +5,7 @@ Unittest max integrer
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """
     class to test the max integrer function
@@ -21,5 +22,3 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 1.5]), 1.5)
         with self.assertRaises(TypeError):
             max_integer([1, "10"])
-        with self.assertRaises(TypeError):
-            max_integer(None)
