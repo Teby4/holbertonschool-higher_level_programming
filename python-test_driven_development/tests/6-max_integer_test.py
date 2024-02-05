@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -2]), -1)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([1, 1.5]), 1.5)
-    
+
     def test_errors(self):
         """ test the raise erorrs """
         with self.assertRaises(TypeError):
@@ -31,7 +31,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_default_list(self):
         """test default list"""
         with self.assertRaises(TypeError):
-            max_integer()
+            max_integer([])
 
 if __name__ == '__main__':
     unittest.main()
