@@ -18,14 +18,14 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-    
+
     @property
     def width(self):
         """
         width
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -34,14 +34,14 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """
         height
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -53,7 +53,7 @@ class Rectangle:
 
     def area(self):
         return self.width * self.height
-    
+
     def perimeter(self):
         if self.width == 0 or self.height == 0:
             return 0
@@ -70,7 +70,7 @@ class Rectangle:
                 rectangle += print_symbol
             rectangle += "\n"
         return rectangle
-    
+
     def _repr_(self):
         return "Rectangle({} {})".format(self.height, self.width)
 
