@@ -56,7 +56,7 @@ class Rectangle:
         else:
             return (self.width + self.height) * 2
 
-    def _str_(self):
+    def __str__(self):
         """str function"""
         rectangle = ""
         if self.width == 0 or self.height == 0:
@@ -67,5 +67,5 @@ class Rectangle:
             rectangle += "\n"
         return rectangle
 
-    def _repr_(self):
+    def __repr__(self):
         return "Rectangle({} {})".format(self.height, self.width)
