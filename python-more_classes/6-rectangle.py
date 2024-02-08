@@ -62,16 +62,17 @@ class Rectangle:
     def __str__(self):
         """str function"""
         rectangle = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return rectangle
-        for i in range(self.height):
-            for x in range(self.width):
+        for x in range(self.__height):
+            for i in range(self.__width):
                 rectangle += "#"
-            rectangle += "\n"
+            if x != (self.__height - 1):
+                rectangle += "\n"
         return rectangle
 
     def __repr__(self):
-        return "Rectangle({} {})".format(self.height, self.width)
+        return "Rectangle({}, {})".format(self.__height, self.__width)
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
