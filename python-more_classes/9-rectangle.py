@@ -90,5 +90,7 @@ class Rectangle:
             return rect_2
         return rect_1
 
+    @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        return cls(size, size)
+
