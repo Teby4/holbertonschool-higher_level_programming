@@ -1,4 +1,4 @@
-MyList = __import__('1-my_list').MyList
+>>>MyList = __import__('1-my_list').MyList
 
 >>>my_list = MyList([3, 6, 1, 9, 2])
 >>>print(my_list)
