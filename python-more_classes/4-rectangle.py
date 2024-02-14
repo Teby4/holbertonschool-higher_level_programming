@@ -14,14 +14,14 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-    
+
     @property
     def width(self):
         """
         width
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -30,14 +30,14 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """
         height
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -49,23 +49,24 @@ class Rectangle:
 
     def area(self):
         return self.width * self.height
-    
+
     def perimeter(self):
         if self.width == 0 or self.height == 0:
             return 0
         else:
             return (self.width + self.height) * 2
 
-    def _str_(self):
+    def __str__(self):
         """str function"""
         rectangle = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return rectangle
-        for i in range(self.height):
-            for x in range(self.width):
+        for x in range(self.__height):
+            for i in range(self.__width):
                 rectangle += "#"
-            rectangle += "\n"
+            if x != (self.__height - 1):
+                rectangle += "\n"
         return rectangle
-    
-    def _repr_(self):
-        return "Rectangle({} {})".format(self.height, self.width)
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.width, self.height)
