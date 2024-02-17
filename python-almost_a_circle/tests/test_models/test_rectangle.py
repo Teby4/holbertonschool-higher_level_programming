@@ -56,7 +56,7 @@ class TestRectangle(unittest.TestCase):
         obj = Rectangle(id=-35, width=5, height=10)
         self.assertEqual(obj.id, -35)
 
-        Rectangle._Rectangle__nb_objects = 0
+        Rectangle.__nb_objects = 0
         obj = Rectangle(width=5, height=10)
         self.assertEqual(obj.id, 1)
         obj = Rectangle(width=5, height=10)
