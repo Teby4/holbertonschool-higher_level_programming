@@ -6,6 +6,7 @@ test file
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """
     Test cases for Rectangle class
@@ -54,6 +55,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             rectangle1.y = -2
+
 
 if __name__ == "__main__":
     unittest.main()
