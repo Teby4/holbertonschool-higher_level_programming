@@ -3,21 +3,17 @@
     RECTANGLE!
 """
 
+from models.base import Base
+
 
 class Rectangle:
     """
     Rectangle class
     """
 
-    __nb_objects = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Rectangle.__nb_objects += 1
-            self.id = Rectangle.__nb_objects
-
+        """init of rectangle class"""
         self.width = width
         self.height = height
         self.x = x
