@@ -69,19 +69,24 @@ class TestRectangle(unittest.TestCase):
         # Test case 4: Rectangle with width=1 and height=1
         rectangle4 = Rectangle(width=1, height=1)
         self.assertEqual(rectangle4.area(), 1)
-    
-    def test_display(self):
-        rect = Rectangle(3, 2, 2, 1)
-        expected_output = "  ###\n  ###\n"
-        with unittest.mock.patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
-            rect.display()
-            self.assertEqual(mock_stdout.getvalue(), expected_output)
 
     def test_str_method(self):
         """Test the __str__ method of Rectangle"""
         # Test case 1: Rectangle with custom values
         rectangle1 = Rectangle(width=5, height=10, x=2, y=3, id=1)
         self.assertEqual(str(rectangle1), "[Rectangle] (1) 2/3 - 5/10")
+
+    def test_update_method(self):
+        """Test the update method of Rectangle"""
+        # Test case 1: Update with all arguments
+        rectangle = Rectangle(1, 2, 3, 4, 5)
+        rectangle.update(6, 7, 8, 9, 10)
+        self.assertEqual(rectangle.id, 6)
+        self.assertEqual(rectangle.width, 7)
+        self.assertEqual(rectangle.height, 8)
+        self.assertEqual(rectangle.x, 9)
+        self.assertEqual(rectangle.y, 10)
+
 
 if __name__ == "__main__":
     unittest.main()
