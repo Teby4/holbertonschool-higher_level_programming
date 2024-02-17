@@ -15,8 +15,8 @@ class Rectangle:
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            Rectangle.__nb_objects += 1
+            self.id = Rectangle.__nb_objects
 
         self.width = width
         self.height = height
@@ -86,3 +86,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+            
+    def area(self):
+        return self.width * self.height
