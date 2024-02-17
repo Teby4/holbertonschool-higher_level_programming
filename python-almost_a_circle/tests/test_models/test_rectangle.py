@@ -71,8 +71,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle4.area(), 1)
     
     def test_display(self):
-        rect = Rectangle(3, 2)
-        expected_output = "###\n###\n"
+        rect = Rectangle(3, 2, 2, 1)
+        expected_output = "  ###\n  ###\n"
         with unittest.mock.patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
             rect.display()
             self.assertEqual(mock_stdout.getvalue(), expected_output)
