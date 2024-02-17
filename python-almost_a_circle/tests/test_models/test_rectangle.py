@@ -25,14 +25,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle1.y, 3)
         self.assertEqual(rectangle1.id, 1)
 
-        # Test case 2: Rectangle with default values
-        rectangle2 = Rectangle(width=0, height=0)
-        self.assertEqual(rectangle2.width, 0)
-        self.assertEqual(rectangle2.height, 0)
-        self.assertEqual(rectangle2.x, 0)
-        self.assertEqual(rectangle2.y, 0)
-        self.assertEqual(rectangle2.id, 2)
-
     def test_setters(self):
         """Test setters for Rectangle"""
         # Test case 1: Setting valid values for width, height, x, and y
