@@ -77,5 +77,11 @@ class TestRectangle(unittest.TestCase):
             rect.display()
             self.assertEqual(mock_stdout.getvalue(), expected_output)
 
+    def test_str_method(self):
+        """Test the __str__ method of Rectangle"""
+        # Test case 1: Rectangle with custom values
+        rectangle1 = Rectangle(width=5, height=10, x=2, y=3, id=1)
+        self.assertEqual(str(rectangle1), "[Rectangle] (1) 2/3 - 5/10")
+
 if __name__ == "__main__":
     unittest.main()
