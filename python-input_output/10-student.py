@@ -19,9 +19,13 @@ class Student:
         """class to json"""
         my_dict = {}
 
-        if attrs:
-            for i in attrs:
-                my_dict[i] = getattr(self, i)
+        if isinstance(attrs, list):
+            for x in attrs:
+                if not isinstance(x, str):
+                    break
+            else:
+                for i in attrs:
+                    my_dict[i] = getattr(self, i)
         else:
             my_dict = self.__dict__
 
