@@ -12,7 +12,7 @@ filename = "add_item.json"
 
 try:
     mylist = load_from_json_file(filename)
-except:
+except FileNotFoundError:
     mylist = []
 
 
