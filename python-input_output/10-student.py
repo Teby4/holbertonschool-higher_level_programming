@@ -25,9 +25,9 @@ class Student:
                     isstr += 1
         else:
             isstr += 1
-        if isstr is 0:
+        if isstr == 0:
             for i in attrs:
-                if hasattr(self, i)
+                if hasattr(self, i):
                     my_dict[i] = getattr(self, i)
         else:
             my_dict = self.__dict__
