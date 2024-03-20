@@ -28,5 +28,5 @@ class Student:
         return my_dict
 
     def reload_from_json(self, json):
-        for key, value in json
+        for key, value in json:
             setattr(self, key, value)
