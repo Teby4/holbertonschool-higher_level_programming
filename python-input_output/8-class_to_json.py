@@ -7,7 +7,5 @@ import json
 
 
 def class_to_json(obj):
-
-    dict = json.dumps(obj)
-
-    return dict
+    """return obj in dict form"""
+    return obj.__dict__
