@@ -83,7 +83,7 @@ class Rectangle(Base):
         """"str"""
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
-    
+
     def update(self, *args):
         """
         Assign arguments to id, width, height, x, and y attributes in order.
