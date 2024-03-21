@@ -2,6 +2,7 @@
 """Create Class Rectangle"""
 
 
+from typing import Any
 from models.base import Base
 
 
@@ -104,5 +105,11 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    def to_dictionary(self):
-        return self.__dict__
+    def to_dictionary(self) -> dict:
+        return {
+        'id': self.id,
+        'width': self.width,
+        'height': self.height,
+        'x': self.x,
+        'y': self.y
+        }

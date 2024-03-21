@@ -2,6 +2,7 @@
 """Create Class Square"""
 
 
+from typing import Any
 from models.rectangle import Rectangle
 
 
@@ -43,5 +44,10 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    def to_dictionary(self):
-        return self.__dict__
+    def to_dictionary(self) -> dict:
+        return {
+        'id': self.id,
+        'size': self.size,
+        'x': self.x,
+        'y': self.y
+        }
