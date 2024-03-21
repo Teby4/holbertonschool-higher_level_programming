@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Create Class Square"""
-
-
-from rectangle import Rectangle
+"""
+In this module, the Rectangle class is defined.
+"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -10,7 +10,7 @@ class Square(Rectangle):
     Write the class Square that inherits from Rectangle:
     """
 
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, size, x=0, y=0, id=None) -> None:
         super().__init__(width=size, height=size, x=x, y=y, id=id)
 
     @property
@@ -18,14 +18,14 @@ class Square(Rectangle):
         return (self.width)
 
     @size.setter
-    def size(self, value):
+    def size(self, value) -> None:
         setattr(self, 'width', value)
         setattr(self, 'height', value)
 
     def __str__(self):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
-    def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs) -> None:
         """
         Assign arguments to id, width, height, x, and y attributes in order.
         """
