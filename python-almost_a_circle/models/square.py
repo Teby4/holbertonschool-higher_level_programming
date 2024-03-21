@@ -2,8 +2,7 @@
 """Create Class Square"""
 
 
-from typing import Any
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
