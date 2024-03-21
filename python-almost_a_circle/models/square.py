@@ -14,11 +14,11 @@ class Square(Rectangle):
         super().__init__(width=size, height=size, x=x, y=y, id=id)
 
     @property
-    def size(self) -> int:
+    def size(self):
         return (self.width)
 
     @size.setter
-    def size(self, value) -> None:
+    def size(self, value):
         self.width = value
         self.height = value
 
