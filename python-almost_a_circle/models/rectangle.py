@@ -103,7 +103,3 @@ class Rectangle(Base):
         if kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
-
-
-
