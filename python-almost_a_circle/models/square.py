@@ -42,11 +42,3 @@ class Square(Rectangle):
         if kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
-    def to_dictionary(self):
-        return {
-            'id': self.id,
-            'size': self.width,
-            'x': self.x,
-            'y': self.y
-        }
